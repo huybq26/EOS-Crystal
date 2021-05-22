@@ -2,13 +2,11 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from './components/header/Header';
 import Navigation from './components/navigation/Navigation';
-import {AppStyles} from "./App.styles";
+import { AppStyles } from "./App.styles";
 import AuthServices from "./app/authentication/Auth.service";
 import Footer from "./components/footer/Footer";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./app/home/Home";
-import ImageTools from "./app/imageTools/ImageTools";
-import ViewImage from "./app/imageTools/viewImage/ViewImage";
 import Input from "./app/input/Input";
 import { InputAdornment } from '@material-ui/core';
 
@@ -27,30 +25,24 @@ function App() {
 
     return (
         <React.Fragment>
-            <CssBaseline/>
-            <Header/>
+            <CssBaseline />
+            <Header />
             <Router>
-                <Navigation authenticated={authStatus}/>
+                <Navigation authenticated={authStatus} />
                 <main className={classes.main}>
 
                     <Switch>
-                        <Route path={"/imageTools/:id"}>
-                            <ViewImage/>
-                        </Route>
-                        <Route path={"/imageTools"}>
-                            <Input/>
-                        </Route>
-                        <Route path = {"/input"}>
-                            <Input/>
+                        <Route path={"/input"}>
+                            <Input />
                         </Route>
                         <Route path={"/"}>
-                            <Home/>
+                            <Home />
                         </Route>
                     </Switch>
 
                 </main>
             </Router>
-            <Footer/>
+            <Footer />
         </React.Fragment>
     );
 }

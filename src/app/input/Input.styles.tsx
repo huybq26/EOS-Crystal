@@ -1,6 +1,6 @@
-import { makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
-export const InputStyles = makeStyles((theme) =>({
+export const InputStyles = makeStyles((theme) => ({
     formtitle: {
         width: 'auto',
         // marginTop: theme.spacing(3),
@@ -17,22 +17,15 @@ export const InputStyles = makeStyles((theme) =>({
             padding: theme.spacing(3),
         },
     },
-    table: {
-        
+    stepper: {
+        padding: theme.spacing(3, 0, 5),
     },
-    submitBtn: {
-        // marginLeft: theme.spacing(30)
+    buttons: {
+        display: 'flex',
+        justifyContent: 'flex-end',
     },
-    chooseFiles: {
-        
+    button: {
+        marginTop: theme.spacing(3),
+        marginLeft: theme.spacing(1),
     },
-    grid2: {
-        // marginLeft: theme.spacing(1)
-    },
-    gridBtn: {
-        marginTop: theme.spacing(3)
-    },
-    crystalType: {
-        marginTop: theme.spacing(5)
-    }
 }))
